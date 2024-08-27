@@ -47,6 +47,9 @@ def main():
     header_databases.delete_unapproved_patients()
     all_rois = find_all_rois(header_databases)
 
+    wanted_type = ['organ']
+    header_databases = identify_wanted_headers(header_databases, wanted_roi_list=['parotid_r'],
+                                               wanted_type=wanted_type)
     """
     Now we load the entirety of patient data
     """
